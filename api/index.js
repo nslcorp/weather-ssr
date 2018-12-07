@@ -14,7 +14,7 @@ const mapForecastData = data => {
   const {current, forecast} = data;
   const feelsLikeC = current.feelslike_c;
   const mappedCurrent = {
-    feelslike_c: feelsLikeC > 0 ? Math.ceil(feelsLikeC) : Math.floor(feelsLikeC),
+    feelslikeC: feelsLikeC > 0 ? Math.ceil(feelsLikeC) : Math.floor(feelsLikeC),
     conditionText: current.condition.text,
     conditionIcon: current.condition.icon,
     tempAvgC: current.temp_c > 0 ? Math.ceil(current.temp_c) : Math.floor(current.temp_c),
@@ -48,7 +48,9 @@ const mapForecastData = data => {
 const getForecast = async () => {
   const data = await getForecastData(urlApixuForecast)
   const mappedData = mapForecastData(data)
-  console.log(mappedData)
+  return mappedData
 }
 
-getForecast()
+module.exports.getForecast = getForecast
+
+

@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const exphbs = require('express-handlebars');
 
+const api = require('./api')
+
 
 const isProd = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT || 8999
@@ -17,7 +19,10 @@ app.set('view engine', 'handlebars');
 
 isProd && app.enable('view cache');
 
-app.get('/', (req, res) => res.render('home/index'));
+app.get('/', async (req, res) => {
+  const {current, forecast} = await api.getForecast();
+  return res.render('home/index', {current, forecast, forecastTop: forecast.slice(0,3)})
+});
 
 //
 //
