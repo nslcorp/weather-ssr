@@ -2,53 +2,35 @@
   <div class="container mt-5 mb-5 ">
     <div class="row no-gutters">
       <div class="col-12 col-sm-4">
+
         <div class="card">
           <div class="card-body">
-            <p>current weather</p>
-            <img src="/icons/sun1.png" alt="" width="50" height="50">
+            <p>Current weather</p>
+            <img src={{current.conditionIcon}} alt="" width="50" height="50">
             <p class="nowrap">Feels like
-            <span class="h2">13°</span>
+            <span class="h2">{{current.feelslikeC}}°</span>
             </p>
+            <p>{{current.conditionText}}</p>
             <p>More</p>
           </div>
         </div>
+
       </div>
-      <div class="col-12 col-sm">
-        <div class="card">
-          <div class="card-body">
-            <p>tomorrow</p>
-            <img src="/icons/sun1.png" alt="" width="50" height="50">
-            <p class="nowrap">Feels like
-              <span class="h2">11°</span>
-            </p>
-            <p>More</p>
+      {{#each forecastTop}}
+        <div class="col-12 col-sm">
+          <div class="card">
+            <div class="card-body">
+              <p>{{date}}</p>
+              <img src={{conditionIcon}} alt="" width="50" height="50">
+              <p class="nowrap">Feels like
+                <span class="h2">{{tempAvgC}}°</span>
+              </p>
+              <p>{{conditionText}}</p>
+              <p>More</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-12 col-sm">
-        <div class="card">
-          <div class="card-body">
-            <p>Saturday</p>
-            <img src="/icons/sun1.png" alt="" width="50" height="50">
-            <p class="nowrap">Feels like
-              <span class="h2">11°</span>
-            </p>
-            <p>More</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm">
-        <div class="card">
-          <div class="card-body">
-            <p>Sunday</p>
-            <img src="/icons/sun1.png" alt="" width="50" height="50">
-            <p class="nowrap">Feels like
-              <span class="h2">8°</span>
-            </p>
-            <p>More</p>
-          </div>
-        </div>
-      </div>
+      {{/each}}
 
     </div>
   </div>
