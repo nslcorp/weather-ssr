@@ -11,7 +11,8 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "prod": "NODE_ENV=production node app.js",
-    "heroku-postbuild": "npm install"
+    "heroku-postbuild": "npm install",
+    "browser-sync": "browser-sync start --s 'zm-pages' -w"
   },
   "author": "",
   "license": "ISC",
