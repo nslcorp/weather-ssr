@@ -23,6 +23,7 @@
     "express-handlebars": "^3.0.0",
     "heroku": "^7.19.3",
     "mongoose": "^5.3.14",
+    "nodemon": "^1.18.8",
     "npm": "^6.4.1",
     "prod": "^1.0.1",
     "run": "^1.4.0"
