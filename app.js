@@ -24,6 +24,10 @@ app.get('/', async (req, res) => {
   return res.render('home/index', {current, forecast, forecastTop: forecast.slice(0,3)})
 });
 
+app.get('/demo', async (req, res) => {
+  return res.render('demo/index')
+});
+
 //
 //
 
