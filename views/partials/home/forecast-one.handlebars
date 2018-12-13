@@ -1,5 +1,5 @@
 <div class="container mt-5 mb-5 mt-1 mb-1">
-  <ul class="collection">
+  <ul class="collection bg-white">
 
     {{#each forecast}}
       <li class="collection-item">
@@ -10,8 +10,7 @@
               <img class="right-align" src={{conditionIcon}} alt="" width="35" height="35">
           </div>
           <div class="col s3 valign-wrapper">
-            <span>{{tempMinC}}°</span>
-            <span>&nbsp;&nbsp;{{tempMaxC}}°</span>
+            <span>{{tempAvgC}}°</span>
           </div>
           <div class="col s1 valign-wrapper" ><span>80%</span></div>
           <div class="col s1"><span>/ 2m/c</span></div>

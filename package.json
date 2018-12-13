@@ -22,6 +22,7 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "heroku": "^7.19.3",
+    "moment": "^2.23.0",
     "mongoose": "^5.3.14",
     "nodemon": "^1.18.8",
     "npm": "^6.4.1",

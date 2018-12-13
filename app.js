@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const exphbs = require('express-handlebars');
+const moment = require('moment')
 
 const api = require('./api')
 
@@ -21,7 +22,14 @@ isProd && app.enable('view cache');
 
 app.get('/', async (req, res) => {
   const {current, forecast} = await api.getForecast();
-  return res.render('home/index', {current, forecast, forecastTop: forecast.slice(0,3)})
+  const nowTime = moment().format('HH:mm');
+
+  const data = {current, forecast, forecastTop: forecast.slice(0,3), nowTime}
+  return res.render('home/index', data)
+});
+
+app.get('/demo', async (req, res) => {
+  return res.render('demo/index')
 });
 
 app.get('/demo', async (req, res) => {
