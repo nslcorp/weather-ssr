@@ -8,7 +8,7 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "npm run prod",
     "dev": "nodemon app.js",
     "prod": "NODE_ENV=production node app.js",
     "heroku-postbuild": "npm install",
@@ -21,8 +21,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
-    "heroku": "^7.19.3",
     "moment": "^2.23.0",
+    "moment-timezone": "^0.5.23",
     "mongoose": "^5.3.14",
     "nodemon": "^1.18.8",
     "npm": "^6.4.1",

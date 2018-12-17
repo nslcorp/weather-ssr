@@ -1,5 +1,11 @@
 const axios = require('axios')
+
+const config = require('../config')
 const urlApixuForecast = 'http://api.apixu.com/v1/forecast.json?key=55ba839b2cf045faba1185522182909&days=7&q=Dnipropetrovsk'
+
+const baseUrl = 'http://api.apixu.com/v1/';
+const forecastUrl = baseUrl + 'forecast.json?key=' + config.apiKey
+
 
 const getForecastData = async url => {
   try {
@@ -51,6 +57,7 @@ const getForecast = async () => {
   return mappedData
 }
 
-module.exports.getForecast = getForecast
+module.exports.getForecast = getForecast;
+module.exports.getForecastHourly
 
 
