@@ -11,6 +11,8 @@ const isProd = process.env.NODE_ENV === 'production';
 const PORT = process.env.PORT || 8999
 
 
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Set View Engine
@@ -36,8 +38,8 @@ app.get('/demo', async (req, res) => {
   return res.render('demo/index')
 });
 
-//
-//
+
+//v1__17.12 -- 10 Request 180kb <900ms
 
 app.listen(PORT, () => {
   console.log(`listening on port: ` + PORT);
