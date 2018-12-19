@@ -1,26 +1,38 @@
-<div class="container mt-5 mb-5 mt-1 mb-1">
-  <ul class="collection bg-white">
+<div class="container">
+  <div class="bg-white mb-3 mb-sm-4 py-1 px-3">
+    <div class="row py-1">
+      <div class="col d-flex justify-content-center align-items-center">
+        <small class="text-muted">Day</small>
+      </div>
+      <div class="col"></div>
 
+      <div class="col d-flex justify-content-center align-items-center">
+        <small class="text-muted">Temp.</small>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center text-muted">Prec.</div>
+      <div class="col d-flex justify-content-center align-items-center d-none d-sm-block text-muted">Wind</div>
+    </div>
     {{#each forecast}}
-      <li class="collection-item">
-        <div class="row mb-0 valign-wrapper">
-          <div class="col s4"><span>{{date}}</span></div>
-          <div class="col s1 ">
-            <div class=""></div>
-              <img class="right-align" src={{conditionIcon}} alt="" width="35" height="35">
-          </div>
-          <div class="col s3 valign-wrapper">
-            <span>{{tempAvgC}}°</span>
-          </div>
-          <div class="col s1 valign-wrapper" ><span>80%</span></div>
-          <div class="col s1"><span>/ 2m/c</span></div>
+      <div class="row py-2 border border-bottom-0 border-left-0 border-right-0">
+        <div class="col ">
+          <span class="d-block">Четверг</span>
+          <small class="d-block text-muted text-nowrap">{{date}}</small>
         </div>
-      </li>
+        <div class="col d-flex justify-content-center align-items-center">
+          <img class="right-align" src={{conditionIcon}} alt="" width="35" height="35">
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+          <span class="h5 mb-0 text-muted">{{tempMinC}}°</span>
+          <span class="h5 mb-0">&nbsp;...&nbsp;&nbsp;</span>
+          <span class="h4 mb-0">{{tempMaxC}}°</span>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">80%</div>
+        <div class="col d-flex justify-content-center align-items-center d-none d-sm-block">20m/c</div>
+      </div>
+
     {{/each}}
+  </div>
 
-
-
-
-
-  </ul>
 </div>
+
+

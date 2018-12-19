@@ -33,6 +33,10 @@ const mapForecastData = data => {
     const minC = data.day.mintemp_c;
     const avgC = data.day.avgtemp_c;
 
+    // console.log(data)
+    //maxwind_kph:
+//totalprecip_in:
+    //avghumidity:
     return ({
       date: data.date,
       dateEpoch: data.date_epoch,

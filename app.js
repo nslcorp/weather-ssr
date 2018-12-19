@@ -25,7 +25,7 @@ isProd && app.enable('view cache');
 
 app.get('/', async (req, res) => {
   const {current, forecast} = await api.getForecast();
-  const nowTime = moment().tz()
+  const nowTime = moment().format('HH:mm')
 
   const data = {current, forecast, forecastTop: forecast.slice(0,3), nowTime}
   return res.render('home/index', data)

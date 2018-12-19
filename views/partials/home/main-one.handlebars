@@ -1,40 +1,39 @@
+<div class="container mb-3 mb-sm-4">
+  <div class="row no-gutters bg-white ">
+    <div class="col-xs-12 col-md-4">
 
-  <div class="container mb-3 mb-sm-4">
-    <div class="row no-gutters bg-white ">
-      <div class="col-xs-12 col-md-4">
-
-        <div class="card">
-          <div class="card-body">
-            <p>
-              <span>current </span>
-              <span>{{nowTime}}</span>
-            </p>
-            <img src={{current.conditionIcon}} alt="" width="50" height="50">
-            <p class="nowrap">Feels like
+      <div class="card">
+        <div class="card-body">
+          <p>
+            <span>current </span>
+            <span>{{nowTime}}</span>
+          </p>
+          <img src={{current.conditionIcon}} alt="" width="50" height="50">
+          <p class="nowrap">Feels like
             <span class="h2">{{current.feelslikeC}}°</span>
-            </p>
-            <p>{{current.conditionText}}</p>
-            <p><a href="/hours" class="text-muted ">view hourly..</a></p>
-          </div>
+          </p>
+          <p>{{current.conditionText}}</p>
+          <p><a href="/hours" class="text-muted ">view hourly..</a></p>
         </div>
-
       </div>
 
-      {{#each forecastTop}}
-        <div class="col-xs-12 col-md">
-          <div class="card">
-            <div class="card-body">
-              <p>{{date}}</p>
-              <img src={{conditionIcon}} alt="" width="50" height="50">
-              <p class="nowrap">Feels like
-                <span class="h2">{{tempAvgC}}°</span>
-              </p>
-              <p>{{conditionText}}</p>
-              <p>More</p>
-            </div>
+    </div>
+
+    {{#each forecastTop}}
+      <div class="col-xs-12 col-md">
+        <div class="card">
+          <div class="card-body">
+            <p>{{date}}</p>
+            <img src={{conditionIcon}} alt="" width="50" height="50">
+            <p class="nowrap">Feels like
+              <span class="h2">{{tempAvgC}}°</span>
+            </p>
+            <p>{{conditionText}}</p>
+            <p>More</p>
           </div>
         </div>
-      {{/each}}
+      </div>
+    {{/each}}
 
-    </div>
   </div>
+</div>
